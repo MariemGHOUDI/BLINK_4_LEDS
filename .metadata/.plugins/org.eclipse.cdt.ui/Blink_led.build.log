@@ -1,0 +1,16 @@
+10:23:14 **** Incremental Build of configuration Debug for project Blink_led ****
+make -j16 all 
+arm-none-eabi-gcc -o "Blink_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/pc/Desktop/projet stm/Blink_led/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Blink_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Blink_led.elf
+ 
+arm-none-eabi-size   Blink_led.elf 
+arm-none-eabi-objdump -h -S  Blink_led.elf  > "Blink_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   5912	     20	   1572	   7504	   1d50	Blink_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: Blink_led.list
+ 
+
+10:23:14 Build Finished. 0 errors, 0 warnings. (took 217ms)
+
